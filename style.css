@@ -31,7 +31,7 @@ ul {
     width: 10%;
     font-size: 26px;
 }
- main{
+ .main{
     background-image: url(img/naruto-shippuden.jpg);
      background-size: cover;
      background-repeat: repeat-y;
@@ -115,6 +115,82 @@ h4{
     width: 16%;
     font-size: 46px;
 }
+/* CONTACT */
+.fond{
+    height: 100vh;
+    background-color: #0a0046;
+}
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    border-radius: 52px;
+    width: 78%;
+    height: 557px;
+    background: #000000;
+    border: #BA2127 6px solid;
+    position: relative;
+}
+.nuage3 img{
+    height: 331px;
+    width: 20%;
+    position: absolute;
+    top: -165px;
+    right: 475px;
+}
+h2{
+    color: #BA2127;
+    text-align: center;
+    margin-top: 67px;
+    font-size: 50px;
+}
+.nom{
+       display: flex;
+    width: 506px;
+    margin-left: 318px;
+    height: 32px;
+    margin-top: 35px;
+    justify-content: space-around;
+}
+.adresse{
+    display: flex;
+    width: 506px;
+    margin-left: 318px;
+    height: 32px;
+    margin-top: 35px;
+    
+    justify-content: space-around;
+}
+.message{
+    display: flex;
+    width: 499px;
+    margin-left: 324px;
+    height: 72px;
+    margin-top: 35px;
+    justify-content: space-around;
+}
+#mes{
+    width: 560px;
+}
+#nom{
+    width: 235px;
+}
+.envoyez{
+    display: flex;
+    flex-direction: column;
+    margin-top: 41px;
+    width: 30%;
+    height: 67px;
+    background: #BA2127;
+    position: relative;
+    margin-left: 400px;
+}
+h5{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-top: 12px;
+}
+/* MEDIA */
 @media (max-width:1030px){
 .contener{
     flex-direction: column;
