@@ -1,3 +1,132 @@
-*{margin: 0;
-    
+ *{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    list-style: none;
+}
+.logo img{
+    height: 100px;
+}
+li a{
+text-decoration: none;
+color: #df3412;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 62%;
+    font-size: 43px;
+    font-weight: 700;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15386E;
+    height: 122px;
+}
+.icon{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    font-size: 26px;
+}
+ main{
+    background-image: url(img/naruto-shippuden.jpg);
+     background-size: cover;
+     background-repeat: repeat-y;
+    height: 100vh;
+    width: 100%; 
+     } 
+     .contener{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+
+     }
+     
+.carre{
+    display: flex;
+    flex-direction: column;
+    border-radius: 52px;
+    width: 30%;
+    height: 440px;
+    background: #15386E;
+    border: #BA2127 6px solid;
+    position: relative;
+}
+.nuage2 img{
+    height: 299px;
+    width: 50%;
+    position: absolute;
+    top: -150px;
+    right: 107px;
+}
+h3{
+    margin-top: 76px;
+    text-align: center;
+    width: 100%;
+    font-size: 45px;
+    color: #df3412;
+}
+p{
+    font-size: 29px;
+    margin-left: 28px;
+    color: white;
+}
+.parchemin img{
+    height: 85px;
+    width: 15%;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+}
+.boutique img{
+    height: 106px;
+    width: 28%;
+    position: absolute;
+    right: -34px;
+    bottom: -25px;
+}
+.chibi img{
+    height: 121px;
+    width: 27%;
+    position: absolute;
+    right: -48px;
+    bottom: -45px;
+}
+.bas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15386E;
+    height: 75px;
+}
+h4{
+    font-size: 27px;
+    margin-left: 24px;
+    color: white;
+}
+.icon2{
+    display: flex;
+    justify-content: space-around;
+    width: 16%;
+    font-size: 46px;
+}
+@media (max-width:1030px){
+.contener{
+    flex-direction: column;
+    height: 300vh;
+}
+h3,p{
+    font-size: 20px;
+}
+
+}
+@media (max-width:1050px) {
+    .navbar ul{
+        display: none;
+    }
 }
