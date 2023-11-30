@@ -38,8 +38,7 @@ ul {
 }
  .main{
     background-image: url(img/naruto-shippuden.jpg);
-     background-size: cover;
-     background-repeat: repeat-y;
+     background-size: cover;    
     height: 100vh;
     width: 100%; 
      } 
@@ -83,7 +82,11 @@ p{
 }
 .parchemin img{
     height: 85px;
-    width: 15%;
+    width: 68px;
+    bottom: -25px;
+    right: 10px;
+}
+.parchemin{
     position: absolute;
     right: 0;
     bottom: -15px;
@@ -213,115 +216,119 @@ h5{
     justify-content: space-around;
 
  }
- /* Navbar mobile */
- .navbar_mobile{
-    width: 100%;
-    position: relative;
-    margin-bottom: 8%;
+ /* Burger */
+ .icons{
+    height: 0;
  }
- label{
-    display: block;
-    position: fixed;
-    top: -20%;
-    width: 100%;
-    height: 40px;
-    cursor: pointer;
- }
- label input{
-    appearance: none;
- }
- label .logo_menu{
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 100%;
-    margin: 20px;
-    background: white;
- }
- label .logo_menu ::before{
-    content: "\f0c9";
-    font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-         font-size: 1.2em;
-            position: absolute;
-               top: 0;
-                  right: 0;
-                     width: 100%;
-                        height: 100%;
-                           display: flex;
-                              justify-content: center;
-                                 align-items: center;
- }
- label input:checked ~ .logo_menu::before{
-    content: "\f00d";
- }
- input:checked ~ .navigation ul li a{
-    display: block;
-    visibility: visible;
- }
- .navigation {   display: flex;
-       justify-content: center;
-          align-items: center;
-             overflow: hidden;
-                width: 100%;
-                   margin-top: -85px;
-                      transition: 0.5s;   }
-  label input:checked~ .navigation {
-    min-height:101vh;  
-}
-.navigation ul::before{
-    position: relative;
-  }
-  .navigation ul {
-    display: flex;
-    align-items: center;
-    height: 120px;
-  }
-  .navigation ul li{
-    text-align: center;
-    list-style: none;
-  }
-  .navigation ul li a{
-    text-decoration: none;
-    color: #333;
-    font-size: 3em;
-    padding: 5px 20px;
-    font-weight: 700;
-    transition: 0.5s;
-    display: none;
-  }
-  .navigation ul li::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em;
-    color: rgba(0, 0, 0, 0.1);
-    z-index: -1;
-    border-radius: 50%;
+
+@media (max-width: 1050px){
+    .icons{
+        display: block; 
+        z-index: 2;
+        right: 0;
+        height: 0;
+    }
+    .ul_link, .account{
+      display: none;
+    }
+    nav li a:hover{
+        color: #804106;
+    }
+    label input{
+        appearance: none;
+    }
+    label{
+        display: block;
+
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .label .logo_menu{ 
+        position: relative;
+
+        background: #1E1E1E;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 20px;
+    }
+    label .logo_menu::before{
+        content: "\f0c9";
     font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 500px;
-    opacity: 1;
-    transition: letter-spacing 0.5s, left 0.3s;
-  }
-  .navigation ul li a:hover::before{
-    content: ""; 
-    opacity: 1;
-    letter-spacing: 10px;
-    left: 50%;
-    width: 3000px;
-    background-color: red;
-  
-  }
-  .navigation ul li:nth-child(1) a::before{
-    background-color: yellow;
-  }
+    font-family: "font awesome 6 free";
+    font-size: 50px;
+    color: #df3412;
+    position: absolute;
+    right: 23px;
+    top: 27px;
+
+    }
+    label input:checked ~ .logo_menu::before{
+        content: "\f00d";
+        font-family: "font awesome 6 free";
+        font-weight: 900;
+        font-size: 25px;
+        position: absolute;
+    }
+    .menu_burger{
+        overflow: hidden;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    background: rgb(215 9 9 / 0%);
+    width: 35%;
+    height: 168px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    visibility: hidden;
+    align-items: center;
+    top: 71px;
+
+
+    }
+    .menu_burger a{
+        color: #BA2127;
+    font-size: 20px;
+    }
+    label input:checked ~ .logo_menu .menu_burger{
+        visibility: visible;
+
+    }
+    ul{
+        display: flex;
+    justify-content: space-between;
+    width: 65%;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: 700;
+    }
+}
+.icons{
+    background-color: #0a0046;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+@media (max-width:530px) {
+    ul{
+        width: 100%;
+    }
+    
+}
+/* Burger */
+
+
 /* MEDIA */
+@media (max-width:1250px){
+    p{
+        font-size: 18px;
+    }
+}
 @media (max-width:1050px) {
     .navbar ul{
         display: none;
@@ -330,13 +337,35 @@ h5{
         display: none;
     }
 }
+@media (min-width:1050px) {
+    .icons ul{
+        visibility: hidden;
+    }
+    
+}
 @media (max-width:1030px){
+    .main{
+        height: 150vh;
+        background-size: contain;
+    }
 .contener{
-    flex-direction: column;
-    height: 300vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 }
 h3,p{
     font-size: 20px;
+}
+.carre{
+    height: 40vh;
+}
+p{
+    font-size: 13px;
+}
+.parchemin img{
+    height: 47px;
+    width: 33px;
 }
 
 }
@@ -346,16 +375,38 @@ h3,p{
         width: 37%;
     }
 }
+@media (max-width:860px){
+    p{
+        font-size: 10px;
+    }
+}
 
 @media (max-width:800px) {
     .icon2{
         font-size: 39px;
+    }
+    .nuage2 img{
+        height: 202px;
+    top: -94px;
+    right: 58px;
     }
 }
 @media (max-width:700px){
     .nuage3 img{
         right: 172px;
         width: 37%;
+    }
+    .chibi img{
+        height: 93px;
+    width: 40%;
+    right: -30px;
+    bottom: -45px;
+    }
+    .boutique img {
+        height: 64px;
+        width: 41%;
+        right: -34px;
+        bottom: -17px;
     }
 }
 @media (max-width:600px){
@@ -391,12 +442,48 @@ h3,p{
   .icon2{
     font-size: 25px;
   }
+  .nuage2 img{
+    height: 162px;
+    top: -76px;
+    right: 43px;
+  }
+  p{
+    font-size: 9px;
+  }
+}
+@media (max-width:570px){
+    h3{
+        margin-top: 51px;
+    }
 }
 @media (max-width:500px){
     .nuage3 img{
         right: 75px;
         width: 56%;
     }
+}
+@media (max-width:440px) {
+    .nuage2 img{
+        height: 115px;
+        top: -54px;
+        right: 32px;
+    }
+    p{
+        font-size: 7px;
+    }
+    .chibi img {
+        height: 93px;
+        width: 67%;
+        right: -25px;
+        bottom: -33px;
+    }
+    .boutique img {
+        height: 64px;
+        width: 59%;
+        right: -20px;
+        bottom: -25px;
+    }
+    
 }
 @media (max-width:430px) {
     .envoyez input{
@@ -418,5 +505,13 @@ h3,p{
 @media (max-width:400px){
     .icon2{
         font-size: 20px;
+    }
+}
+@media (max-width:390px){
+    h3{
+        font-size: 16px;
+    }
+    p{
+        font-size: 6px;
     }
 }
